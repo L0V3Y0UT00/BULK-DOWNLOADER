@@ -11,3 +11,11 @@ Save this script as bulk_downloader.sh
 Make it executable: chmod +x bulk_downloader.sh
 Run it: ./bulk_downloader.sh
 Note: For Facebook downloads, you might need cookies for private videos or age-restricted content. You can add --cookies cookies.txt to the yt-dlp command if needed.
+
+
+## Installation
+
+Clone the repository using:
+
+```bash
+git clone https://github.com/L0V3Y0UT00/BULK-DOWNLOADER.git

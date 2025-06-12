@@ -10,7 +10,6 @@ header() {
      echo "               BY Ans Raza(0xAnsR)"
       echo "                                v:0.1"
     echo "============================================="
-    echo
 }
 
 # Function to check if yt-dlp is installed

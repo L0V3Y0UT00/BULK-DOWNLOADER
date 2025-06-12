@@ -21,4 +21,5 @@ A script to download videos from platforms like Facebook, YouTube, and more usin
 ```bash
 git clone https://github.com/L0V3Y0UT00/BULK-DOWNLOADER.git
 cd BULK-DOWNLOADER
-chmod +x bulk_downloader.sh
+chmod +x v3.sh
+./v3.sh

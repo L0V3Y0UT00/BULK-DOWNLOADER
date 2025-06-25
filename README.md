@@ -41,48 +41,49 @@ enter    y   than
 ```bash
 git clone https://github.com/L0V3Y0UT00/BULK-DOWNLOADER.git
 cd BULK-DOWNLOADER
+  chmod +x v8.sh && ./v8.sh
 
 
 
 
 
-
-Below is the `README.md` content with clickable links, formatted as plain text for easy copying. You can paste this into a `README.md` file in your project directory.
-
-```markdown
 # Bulk Video Downloader
 
 A script to download videos from platforms like [Facebook](https://www.facebook.com), [YouTube](https://www.youtube.com), and more using [yt-dlp](https://github.com/yt-dlp/yt-dlp).
 
 ## How to Use
 
-1. **Install Chrome Extension for Cookies**:
-   - Install the **[Get Cookies.txt LOCALLY](https://chromewebstore.google.com/detail/get-cookiestxt-locally/cclelndahbckbenkjhflpdbgdldlbecc)** Chrome extension.
-   - Use this extension to export cookies from the target website (e.g., [Facebook](https://www.facebook.com), [YouTube](https://www.youtube.com)) to a `cookies.txt` file for authenticated downloads.
+### Install Chrome Extension for Cookies
 
-2. **Access a Terminal**:
-   - Use [Google Cloud Shell](https://shell.cloud.google.com/?hl=en_US&fromcloudshell=true&show=terminal) or a local terminal (Linux, macOS, or Windows with WSL/Git Bash).
+- Install the **[Get Cookies.txt LOCALLY](https://chromewebstore.google.com/detail/get-cookiestxt-locally/cclelndahbckbenkjhflpdbgdldlbecc)** Chrome extension.
+- Use this extension to export cookies from the target website (e.g., [Facebook](https://www.facebook.com), [YouTube](https://www.youtube.com)) to a `cookies.txt` file for authenticated downloads.
 
-3. **Clone and Run the Script**:
-   - Run the following commands in your terminal:
-     ```bash
-     git clone https://github.com/L0V3Y0UT00/BULK-DOWNLOADER.git
-     cd BULK-DOWNLOADER
-     chmod +x v8.sh && ./v8.sh
-     ```
-   - When prompted, enter `y` to proceed.
-   - Provide the video/channel URL, path to `cookies.txt` (if needed), and preferred video quality (e.g., auto-best, 1080p, 720p, 480p).
+### Access a Terminal
 
-4. **Post-Download Options**:
-   - **Zip Downloads**: Convert the `downloaded_videos` folder to a ZIP file:
-     ```bash
-     zip -r downloaded_videos.zip downloaded_videos
-     ```
-   - **Start Python Server**: Share or access files via a local server:
-     ```bash
-     python3 -m http.server 8000
-     ```
-     Access at `http://<your-ip>:8000`.
+- Use [Google Cloud Shell](https://shell.cloud.google.com/?hl=en_US&fromcloudshell=true&show=terminal) or a local terminal (Linux, macOS, or Windows with WSL/Git Bash).
+
+### Clone and Run the Script
+
+- Run the following commands in your terminal:
+  ```bash
+  git clone https://github.com/L0V3Y0UT00/BULK-DOWNLOADER.git
+  cd BULK-DOWNLOADER
+  chmod +x v8.sh && ./v8.sh
+  ```
+- When prompted, enter `y` to proceed.
+- Provide the video/channel URL, path to `cookies.txt` (if needed), and preferred video quality (e.g., auto-best, 1080p, 720p, 480p).
+
+### Post-Download Options
+
+- **Zip Downloads**: Convert the `downloaded_videos` folder to a ZIP file:
+  ```bash
+  zip -r downloaded_videos.zip downloaded_videos
+  ```
+- **Start Python Server**: Share or access files via a local server:
+  ```bash
+  python3 -m http.server 8000
+  ```
+  Access at `http://<your-ip>:8000`.
 
 ## Features
 
@@ -109,11 +110,9 @@ A script to download videos from platforms like [Facebook](https://www.facebook.
 ```
 
 ### Instructions
-1. Copy the above text.
+1. Copy the above Markdown text.
 2. Create or open a file named `README.md` in your project directory (e.g., in the `BULK-DOWNLOADER` folder).
 3. Paste the content into `README.md` and save the file.
-4. If you're using a Git repository, commit and push the file to make it visible on GitHub.
+4. If using a Git repository, commit and push the file to make it visible on GitHub.
 
-Let me know if you need help with any specific step!
-chmod +x v8.sh && ./v8.sh
-
+Let me know if you need further assistance or modifications!

@@ -41,7 +41,7 @@ enter    y   than
 ```bash
 git clone https://github.com/L0V3Y0UT00/BULK-DOWNLOADER.git
 cd BULK-DOWNLOADER
-  chmod +x v8.sh && ./v8.sh
+  chmod +x v8.sh && ./v8.sh  ```
 
 
 

@@ -4,6 +4,7 @@ setup.py
 blkdwnld/__init__.py
 blkdwnld/blkdwnld.py
 blkdwnld/blkdwnld0.py
+blkdwnld/blkdwnld1.py
 blkdwnld.egg-info/PKG-INFO
 blkdwnld.egg-info/SOURCES.txt
 blkdwnld.egg-info/dependency_links.txt

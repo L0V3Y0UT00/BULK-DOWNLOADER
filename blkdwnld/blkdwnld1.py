@@ -69,17 +69,17 @@ def setup_cookies():
     if cookies_file.exists() and cookies_file.stat().st_size > 0:
         with open(cookies_file, 'r') as f:
             if "# Netscape HTTP Cookie File" in f.read():
-                print(f"{GREEN}Using existing cookies.txt{NC}")
+                print(f"{GREEN}Using cookies.txt{NC}")
                 cookies_command = ["--cookies", str(cookies_file)]
                 return cookies_command
             else:
-                print(f"{RED}Existing cookies.txt is invalid!{NC}")
+                print(f"{RED}cookies.txt does not contain valid cookies!{NC}")
     
     print("Steps to get cookies:")
     print("1. Log in to the target site in Chrome/Firefox")
     print("2. Install the 'Get cookies.txt LOCALLY' extension:")
     print("   [Chrome Web Store](https://chromewebstore.google.com/detail/get-cookiestxt-locally/cclelndahbckbenkjhflpdbgdldlbecc)")
-    print("3. Export cookies as 'cookies.txt' or paste them below\n")
+    print("3. Export cookies as 'cookies.txt' in this folder\n")
     
     choice = input("Use cookies? (y/n): ").lower()
     if choice != 'y':
@@ -87,14 +87,8 @@ def setup_cookies():
     
     print("\nCookie Setup Options:")
     print("1) Provide cookies.txt path")
-    print("2) Paste cookies directly")
-    print("3) Edit cookies.txt in text editor")
-    print("4) Skip cookie setup")
-    method = input("Select (1-4): ")
-    
-    while method not in {'1', '2', '3', '4'}:
-        print(f"{RED}Invalid choice. Enter a number between 1 and 4.{NC}")
-        method = input("Select (1-4): ")
+    print("2) Skip cookie setup")
+    method = input("Select (1-2): ")
     
     if method == '1':
         path = input("Enter full path to cookies.txt: ")
@@ -102,39 +96,9 @@ def setup_cookies():
             with open(path, 'r') as f:
                 if "# Netscape HTTP Cookie File" in f.read():
                     cookies_file.write_text(Path(path).read_text())
-                    print(f"{GREEN}Cookies configured from file!{NC}")
+                    print(f"{GREEN}Cookies configured!{NC}")
                     return ["--cookies", str(cookies_file)]
         print(f"{RED}File not found or invalid! Continuing without cookies.{NC}")
-    
-    elif method == '2':
-        print(f"{YELLOW}Paste cookies (starting with '# Netscape HTTP Cookie File', press Ctrl+D or Ctrl+Z when done):{NC}")
-        cookies_content = []
-        try:
-            while True:
-                line = input()
-                cookies_content.append(line)
-        except EOFError:
-            cookies_content = "\n".join(cookies_content)
-            if "# Netscape HTTP Cookie File" in cookies_content:
-                cookies_file.write_text(cookies_content)
-                print(f"{GREEN}Cookies saved to cookies.txt!{NC}")
-                return ["--cookies", str(cookies_file)]
-            else:
-                print(f"{RED}Invalid cookies format! Must start with '# Netscape HTTP Cookie File'. Continuing without cookies.{NC}")
-    
-    elif method == '3':
-        editor = os.getenv("EDITOR", "nano")
-        print(f"{YELLOW}Opening cookies.txt in {editor}. Save and exit when done.{NC}")
-        if not cookies_file.exists():
-            cookies_file.write_text("# Netscape HTTP Cookie File\n# Paste your cookies below\n")
-        subprocess.run([editor, str(cookies_file)])
-        if cookies_file.exists() and cookies_file.stat().st_size > 0:
-            with open(cookies_file, 'r') as f:
-                if "# Netscape HTTP Cookie File" in f.read():
-                    print(f"{GREEN}Cookies configured from edited file!{NC}")
-                    return ["--cookies", str(cookies_file)]
-            print(f"{RED}Edited cookies.txt is invalid! Continuing without cookies.{NC}")
-    
     return []
 
 def detect_platform(url):
@@ -200,13 +164,13 @@ def configure_editing():
     if choice == '2':
         start = input("Enter start time (e.g., 00:00:10): ")
         duration = input("Enter duration (e.g., 00:00:30): ")
-        return f"-ss {start} -t {duration} -c:v copy -c:a copy", "_trimmed.mp4", choice, None
+        return f"-ss {start} -t {duration} -c:v copy -c:a copy", "_trimmed.mp4", choice
     elif choice == '3':
         resolution = input("Enter resolution (e.g., 1280x720): ")
-        return f"-vf scale={resolution} -c:a copy", "_resized.mp4", choice, None
+        return f"-vf scale={resolution} -c:a copy", "_resized.mp4", choice
     elif choice == '4':
         format = input("Enter output format (e.g., mp4, avi): ")
-        return "-c:v libx264 -c:a aac", f"_converted.{format}", choice, None
+        return "-c:v libx264 -c:a aac", f"_converted.{format}", choice
     elif choice == '5':
         print(f"{BOLD}Flip Options:{NC}")
         flip_options = ["Horizontal flip", "Vertical flip", "Both"]

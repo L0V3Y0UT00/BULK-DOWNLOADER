@@ -1,0 +1,2 @@
+[console_scripts]
+blkdwnld = blkdwnld.blkdwnld:main

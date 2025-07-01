@@ -137,6 +137,25 @@ def setup_cookies():
     
     return []
 
+def validate_url(url):
+    """Validate URL format and TLD."""
+    # Regex for URLs with valid TLDs
+    url_pattern = re.compile(
+        r'^https?://'  # http:// or https://
+        r'(?:(?:[A-Z0-9](?:[A-Z0-9-]{0,61}[A-Z0-9])?\.)+[A-Z]{2,6}\.?|'  # domain...
+        r'localhost|'  # localhost...
+        r'\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})'  # ...or IP
+        r'(?::\d+)?'  # optional port
+        r'(?:/?|[/?]\S+)$', re.IGNORECASE)
+    
+    # Common TLDs for validation
+    valid_tlds = {'.com', '.net', '.org', '.edu', '.gov', '.co', '.io', '.me', '.tv', '.biz', '.info'}
+    if not url_pattern.match(url):
+        return False
+    # Extract TLD
+    tld = '.' + url.split('.')[-1].split('/')[0].lower()
+    return tld in valid_tlds
+
 def detect_platform(url):
     """Detect platform from URL."""
     if "youtube.com" in url or "youtu.be" in url:
@@ -296,20 +315,28 @@ def main():
 
     # URL input and platform detection
     if not last_config:
-        video_url = input(f"{YELLOW}Enter video/channel/post/page URL: {NC}")
-        if not video_url:
-            print(f"{RED}URL cannot be empty!{NC}")
-            sys.exit(1)
-        platform = detect_platform(video_url)
-        print(f"{GREEN}Detected platform: {platform}{NC}")
+        while True:
+            video_url = input(f"{YELLOW}Enter video/channel/post/page URL: {NC}")
+            if not video_url:
+                print(f"{RED}URL cannot be empty!{NC}")
+                continue
+            if validate_url(video_url):
+                platform = detect_platform(video_url)
+                print(f"{GREEN}Detected platform: {platform}{NC}")
+                break
+            print(f"{RED}Invalid URL! Must have a valid TLD (e.g., .com, .net, .org).{NC}")
     else:
-        video_url = input(f"{YELLOW}Enter new URL (press Enter to reuse {last_config['video_url']}): {NC}")
-        if video_url:
-            platform = detect_platform(video_url)
-            print(f"{GREEN}Detected platform: {platform}{NC}")
-        else:
-            video_url = last_config['video_url']
-            platform = last_config['platform']
+        while True:
+            video_url = input(f"{YELLOW}Enter new URL (press Enter to reuse {last_config['video_url']}): {NC}")
+            if not video_url:
+                video_url = last_config['video_url']
+                platform = last_config['platform']
+                break
+            if validate_url(video_url):
+                platform = detect_platform(video_url)
+                print(f"{GREEN}Detected platform: {platform}{NC}")
+                break
+            print(f"{RED}Invalid URL! Must have a valid TLD (e.g., .com, .net, .org).{NC}")
 
     # Cookie setup
     global cookies_command

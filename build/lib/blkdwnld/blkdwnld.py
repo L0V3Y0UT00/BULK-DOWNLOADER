@@ -248,7 +248,7 @@ def show_summary(platform, url_identifier, quality_label, output_dir, edit_choic
     print(f"{GREEN}Download Settings:{NC}")
     print(f" - Platform: {platform}")
     print(f" - URL: {video_url}")
-    print(f" - Source:理工url_identifier}")
+    print(f" - Source: {url_identifier}")
     print(f" - Quality: {quality_label}")
     print(f" - Cookies: {'Enabled' if cookies_command else 'Disabled'}")
     print(f" - Description: {'Included' if description_choice == '1' else 'Excluded'}")

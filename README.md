@@ -4,6 +4,11 @@
 
 This page provides step-by-step instructions to open specific URLs, install a Chrome extension, and execute terminal commands related to a bulk downloader tool.
 
+## Video Demonstration
+<video controls width="640" height="360">
+  <source src="https://l0v3y0ut00.github.io/L0V3Y0UT00%20BULK-DOWNLOADER.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 ## Instructions
 
 ### 1. Open Google Cloud Shell

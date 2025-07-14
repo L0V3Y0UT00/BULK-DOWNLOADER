@@ -1,92 +1,65 @@
-# blkdwnld
+# Task Instructions: Links and Commands
 
-A bulk video downloader tool by Ans Raza (0xAnsR). Download videos from YouTube, TikTok, Facebook, and other platforms using yt-dlp, with customizable quality and editing options.
+## Overview
 
-## Installation
+This page provides step-by-step instructions to open specific URLs, install a Chrome extension, and execute terminal commands related to a bulk downloader tool.
 
-```bash
-pip install blkdwnld
-Usage
-Run the interactive command:
+## Video Demonstration
+<video controls width="640" height="360">
+  <source src="https://l0v3y0ut00.github.io/L0V3Y0UT00%20BULK-DOWNLOADER.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+## Instructions
 
-bash
+### 1. Open Google Cloud Shell
 
-Collapse
+**Link**: [Google Cloud Shell](https://shell.cloud.google.com/?hl=en_US&fromcloudshell=true&show=terminal&pli=1)
 
-Wrap
+**Action**: Copy the URL, paste it into your browser’s address bar, and press Enter. This opens the Google Cloud Shell terminal (requires a Google account with Cloud Shell access).
 
-Run
+### 2. Install Chrome Extension
 
-Copy
-blkdwnld
-Follow the prompts to:
+**Link**: [Get Cookies.txt Locally](https://chromewebstore.google.com/detail/get-cookiestxt-locally/cclelndahbckbenkjhflpdbgdldlbecc?pli=1)
 
-Select platform (YouTube, TikTok, Facebook, or Other)
-Enter the video or channel/page URL
-Choose download scope (single video or all videos)
-Select quality (Best, 1080p, 720p, 480p, or Audio only)
-Optionally include description files or apply video edits (trim, resize, convert, flip)
-Features
-Multi-Platform Support: Downloads from YouTube, Facebook, TikTok, and other yt-dlp-supported sites.
-Flexible Download Options: Single video or entire channel/playlist downloads.
-Quality Selection: Choose Best quality, 1080p, 720p, 480p, or Audio only (MP3).
-Video Editing: Trim, resize, convert, or flip videos using ffmpeg (requires ffmpeg installed).
-Cookie Support: Use cookies.txt for private/restricted content (export via Get Cookies.txt LOCALLY).
-Automatic Setup: Installs yt-dlp if missing; prompts for ffmpeg installation.
-Organized Output: Saves files to platform-specific folders with original video titles.
-Prerequisites
-Python 3.6+
-ffmpeg (install via sudo apt-get install ffmpeg on Linux or brew install ffmpeg on macOS)
-Optional: cookies.txt for authenticated downloads
-Example Workflow
-Install the Chrome extension Get Cookies.txt LOCALLY and export cookies from the target site.
-Install the package: pip install blkdwnld
-Run: blkdwnld
-Follow prompts to download videos (e.g., https://www.youtube.com/watch?v=dQw4w9WgXcQ).
-Optionally zip the output folder: zip -r downloaded_videos.zip <output_folder>
-Share files via a local server: python3 -m http.server 8000
-Troubleshooting
-Cookies: Ensure cookies.txt is in the Netscape format and placed in the working directory.
-ffmpeg: Install manually if the script’s auto-install fails.
-URLs: Verify the URL is valid and accessible.
-Issues: Check the GitHub repository for support.
-License
-MIT License - see LICENSE for details.
+**Action**: Open the link in Google Chrome, click “Add to Chrome,” and confirm the installation. This installs an extension for exporting cookies in cookies.txt format.
 
-Author
-Ans Raza (0xAnsR)
+### 3. Open YouTube Shorts
 
-text
+**Link**: [Alta Skifer Shorts](https://www.youtube.com/@Alta_skifer/shorts)
 
-Collapse
+**Action**: Copy the URL, paste it into your browser’s address bar, and press Enter to visit the Shorts section of the Alta Skifer YouTube channel.
 
-Wrap
+### 4. Execute Terminal Commands
 
-Copy
-This `README.md` aligns with the `pip` package, includes installation instructions, and reflects the features described in your repository.
+**Prerequisites**: Ensure you’re using a Unix-like terminal (e.g., Google Cloud Shell or a local terminal) with necessary permissions.
 
-#### Verify `LICENSE`
-Ensure `/workspaces/BULK-DOWNLOADER/LICENSE` contains:
+**Commands**:
 
-```text
-MIT License
+- `pkg install git -y`
+- `pkg install yt-dlp -y`
+- `pkg install ffmpeg -y`
+- `git clone https://github.com/L0V3Y0UT00/BULK-DOWNLOADER`
+- `cd BULK-DOWNLOADER`
+- `chmod +x .v12.sh`
+- `./v12.sh`
 
-Copyright (c) 2025 Ans Raza (0xAnsR)
+**Steps**:
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+1. Open a terminal (e.g., Google Cloud Shell from step 1 or a local terminal).
+2. Copy `pkg install git -y`, paste it into the terminal, and press Enter to install Git.
+3. Copy `pkg install yt-dlp -y`, paste it into the terminal, and press Enter to install yt-dlp.
+4. Copy `pkg install ffmpeg -y`, paste it into the terminal, and press Enter to install ffmpeg.
+5. Copy `git clone https://github.com/L0V3Y0UT00/BULK-DOWNLOADER`, paste it into the terminal, and press Enter to clone the repository.
+6. Copy `cd BULK-DOWNLOADER`, paste it into the terminal, and press Enter to enter the directory.
+7. Copy `chmod +x .v12.sh`, paste it into the terminal, and press Enter to make the script executable.
+8. Copy `./v12.sh`, paste it into the terminal, and press Enter to run the script (ensure `.v12.sh` exists).
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+## Notes
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+- Verify the authenticity and safety of the GitHub repository and script before execution.
+- Ensure you have the necessary permissions and environment setup for the terminal commands. The `pkg` commands assume a package manager like Termux or a similar environment.
+- Links open in new tabs for convenience.
+
+## Generated
+
+Instructions generated by Ans Raza +92 308 6671782, on July 13, 2025, at 10:53 AM PKT.

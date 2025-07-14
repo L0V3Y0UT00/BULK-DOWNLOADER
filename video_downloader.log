@@ -1,0 +1,21 @@
+
+[0;32mDetected platform: YOUTUBE[0m
+[1mYouTube Cookies Setup[0m
+Required for private/restricted YouTube videos.
+
+1) Provide path to cookies.txt
+2) Paste cookies directly (saved to cookies.txt)
+3) Skip (for public videos only)
+[1;33mPaste your cookies below (Netscape format).
+Type [1mEOF[0m on a new line when finished:[0m
+[0;32mcookies.txt created successfully.[0m
+[1mSelect Quality:[0m
+1) Best quality
+2) 1080p
+3) 720p
+4) 480p
+5) Audio only (MP3)
+[0;32mStarting Download...[0m
+Platform: YOUTUBE
+Quality: Best
+Output folder: youtube_wwwyoutubecomTechnoMindHindir9ushorts_20250714_095844

@@ -68,7 +68,7 @@ cd BULK-DOWNLOADER
 #### ✅ Make the script executable
 
 ```bash
-chmod +x .v12.sh
+chmod +x v12.sh
 ```
 
 #### ✅ Run the script
@@ -133,7 +133,7 @@ cd BULK-DOWNLOADER
 #### ✅ Make the script executable
 
 ```bash
-chmod +x .v12.sh
+chmod +x v12.sh
 ```
 
 #### ✅ Run the script
@@ -146,10 +146,10 @@ chmod +x .v12.sh
 
 ## 📝 Notes
 
-* ✅ **Verify** the GitHub repository and script (`.v12.sh`) before running.
+* ✅ **Verify** the GitHub repository and script (`v12.sh`) before running.
 * ⚠️ **PC users**: Use `sudo apt-get` in Cloud Shell, not `pkg`.
 * ⚠️ **Termux users**: Run `termux-setup-storage` if file access is needed.
-* ✅ Ensure the file `.v12.sh` exists before running `chmod` or executing.
+* ✅ Ensure the file `v12.sh` exists before running `chmod` or executing.
 * 🔗 Links open in new tabs for convenience.
 * 📋 **Copy buttons** (JavaScript) may not work in all environments. Manually copy commands if needed.
 

@@ -11,9 +11,10 @@ You'll learn how to set up and run the bulk downloader tool, including installin
 
 ## 🎥 Video Demonstration
 
-> ⚠️ _Your browser does not support the video tag._
+[▶️ Watch the Demo Video](https://github.com/L0V3Y0UT00/L0V3Y0UT00.github.io/blob/main/L0V3Y0UT00%20BULK-DOWNLOADER.mp4)
 
----
+> 📁 _Click the link above to view or download the `.mp4` file hosted on GitHub._
+
 
 ## 🖥️ For PC Users (Google Cloud Shell)
 

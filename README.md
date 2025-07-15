@@ -1,8 +1,3 @@
-Here is your **corrected and fully formatted** `README.md` file in **clean Markdown** with each command properly separated and copyable **one at a time**. This version also fixes formatting issues from your pasted content:
-
----
-
-````markdown
 # 📥 Bulk Downloader Instructions
 
 This guide provides step-by-step instructions for:

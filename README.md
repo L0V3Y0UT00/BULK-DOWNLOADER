@@ -7,7 +7,17 @@ This guide provides step-by-step instructions for:
 
 You'll learn how to set up and run the bulk downloader tool, including installing a Chrome extension and executing terminal commands.
 
+
+
 ---
+
+
+## 🎥 Video Demonstration
+
+<video width="640" height="360" controls>
+  <source src="https://L0V3Y0UT00.github.io/L0V3Y0UT00%20BULK-DOWNLOADER.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video> 
 
 ## 🎥 Video Demonstration
 
